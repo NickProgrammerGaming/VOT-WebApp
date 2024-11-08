@@ -1,7 +1,8 @@
 
 # VOT Web App 
 
-This is a web application made with python Flask framework using SQLite database and deploying it with Docker.
+This is a simple web application made with python Flask framework using SQLite database and deploying it with Docker.
+The app takes user input from an input box and when a button for adding an item is clicked the user input is stored to the database and then is displayed in a list below the input box paired with a delete button which deletes the selected item from the database and the site. 
 
 
 
