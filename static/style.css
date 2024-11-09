@@ -1,4 +1,4 @@
-
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,61 +6,78 @@
     font-family: Arial, sans-serif;
 }
 
+/* Overall body styling */
 body {
     background-color: #f4f4f9;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     color: #333;
 }
 
+/* Centered container */
 .container {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     text-align: center;
 }
 
+/* Header styling */
 h1 {
     color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
 }
 
-
+/* Form styling */
 form {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
 }
 
 input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    margin-right: 5px;
+    flex: 1;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 16px;
+    transition: border-color 0.3s ease;
 }
 
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button styling */
 button {
-    padding: 10px 15px;
+    padding: 12px 18px;
     font-size: 16px;
+    font-weight: 600;
     background-color: #4CAF50;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-
+/* List styling */
 ul {
     list-style-type: none;
     padding: 0;
@@ -69,18 +86,46 @@ ul {
 li {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 12px 15px;
     background-color: #f9f9f9;
-    margin-bottom: 5px;
-    border-radius: 4px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
 }
 
+li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Delete link styling */
 a {
     color: #ff4c4c;
     text-decoration: none;
     font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: #e33e3e;
     text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    button {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    input[type="text"] {
+        font-size: 14px;
+    }
 }
